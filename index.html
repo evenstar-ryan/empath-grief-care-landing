@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empath Grief Care Support Groups</title>
     
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://empathhealth.org/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://empathhealth.org/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://empathhealth.org/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://empathhealth.org/favicon-16x16.png">
+    
     <!-- Google Fonts - Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,40 +54,40 @@
             padding: 0 2rem;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .tagline {
-            font-size: 0.95rem;
-            opacity: 0.95;
-        }
-
         .hero {
-            background: linear-gradient(to bottom, var(--bg-light) 0%, var(--white) 100%);
-            padding: 3rem 0;
+            position: relative;
+            background-image: linear-gradient(rgba(56, 29, 79, 0.7), rgba(56, 29, 79, 0.7)), 
+                              url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            padding: 6rem 0 4rem 0;
             text-align: center;
+            color: var(--white);
         }
 
         .hero-content {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
+            position: relative;
+            z-index: 1;
         }
 
         .hero h1 {
-            font-size: 2.5rem;
-            color: var(--empath-purple);
+            font-size: 2.8rem;
+            color: var(--white);
             margin-bottom: 1rem;
             font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
         }
 
         .hero-subtitle {
-            font-size: 1.125rem;
-            color: var(--text-light);
+            font-size: 1.25rem;
+            color: var(--white);
             margin-bottom: 2rem;
+            opacity: 0.95;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         .registration-box {
@@ -122,7 +128,7 @@
 
         .service-area {
             margin-bottom: 4rem;
-            background: var(--white);
+            background: var(--bg-light);
             border-radius: 12px;
             padding: 2.5rem;
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
@@ -164,17 +170,28 @@
         }
 
         .group-session {
-            background: var(--bg-light);
+            background: var(--white);
             padding: 1.5rem;
             margin-bottom: 1rem;
             border-radius: 8px;
+            border: 1px solid #E0E0E0;
             border-left: 4px solid var(--empath-teal);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+            cursor: pointer;
         }
 
         .group-session:hover {
             transform: translateX(5px);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            border-left-color: var(--empath-purple);
+            background: #FAFAFA;
+        }
+        
+        .group-session .session-location::after {
+            content: " 📍";
+            font-size: 0.9rem;
+            opacity: 0.7;
         }
 
         .session-time {
@@ -219,7 +236,7 @@
         }
 
         .seminar-section {
-            background: var(--bg-light);
+            background: transparent;
             padding: 2rem;
             border-radius: 8px;
             margin-bottom: 2rem;
@@ -230,7 +247,9 @@
             padding: 1.25rem;
             margin-bottom: 1rem;
             border-radius: 6px;
+            border: 1px solid #E0E0E0;
             border-left: 4px solid var(--empath-purple);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .seminar-title {
@@ -319,6 +338,7 @@
             cursor: pointer;
             font-weight: 600;
             transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
         }
 
         .filter-btn:hover {
@@ -333,7 +353,11 @@
 
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 1.875rem;
+                font-size: 2rem;
+            }
+
+            .hero {
+                padding: 4rem 0 3rem 0;
             }
 
             .service-area {
@@ -364,13 +388,16 @@
     </style>
 </head>
 <body>
-   <!-- Header -->
+    <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <img src="https://octanecdn.com/empathenginesites/empathenginesites_557213614.svg" alt="Empath Health" style="height: 60px;">
+            <a href="https://empathhealth.org/grief-services" target="_blank" style="display: inline-block;">
+                <img src="https://octanecdn.com/empathenginesites/empathenginesites_557213614.svg" alt="Empath Health" style="height: 60px; cursor: pointer;">
+            </a>
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
             <h1>Grief Care Support Groups</h1>
@@ -391,6 +418,7 @@
         <button class="filter-btn" onclick="filterArea('marion')">Marion County</button>
         <button class="filter-btn" onclick="filterArea('hillsborough')">Hillsborough & Pinellas</button>
         <button class="filter-btn" onclick="filterArea('tidewell')">DeSoto, Charlotte, Manatee & Sarasota</button>
+        <button class="filter-btn" onclick="filterArea('virtual-special')">Virtual & Special Events</button>
     </div>
 
     <!-- Main Content -->
@@ -708,7 +736,7 @@
             </div>
 
             <!-- Virtual Seminars -->
-            <div class="group-category">
+            <div class="group-category" data-category="virtual-special">
                 <h3>Virtual Seminars <span class="virtual-tag">VIRTUAL</span></h3>
                 <div class="special-note">
                     <p><strong>To register, email your interest to: <a href="mailto:jspurr@empathhealth.org" style="color: var(--empath-teal);">jspurr@empathhealth.org</a></strong></p>
@@ -760,7 +788,7 @@
             </div>
 
             <!-- Special Events -->
-            <div class="event-section">
+            <div class="event-section" data-category="virtual-special">
                 <h3 style="color: var(--empath-purple); font-size: 1.75rem; margin-bottom: 1.5rem;">Special Events</h3>
 
                 <div class="event-item">
@@ -813,34 +841,66 @@
     <script>
         // Filter functionality
         function filterArea(area) {
-            // Remove active class from all buttons
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
-            
-            // Add active class to clicked button
             event.target.classList.add('active');
             
-            // Show/hide sections
             const sections = document.querySelectorAll('.service-area');
-            sections.forEach(section => {
-                if (area === 'all') {
-                    section.style.display = 'block';
-                } else {
-                    if (section.dataset.area === area) {
+            
+            if (area === 'virtual-special') {
+                // Hide all service areas
+                sections.forEach(section => section.style.display = 'none');
+                
+                // Show only Tidewell (which contains the virtual/special events)
+                const tidewellSection = document.querySelector('[data-area="tidewell"]');
+                if (tidewellSection) {
+                    tidewellSection.style.display = 'block';
+                    
+                    // Hide all group categories and event sections first
+                    tidewellSection.querySelectorAll('.group-category, .event-section').forEach(el => {
+                        el.style.display = 'none';
+                    });
+                    
+                    // Show only virtual-special items
+                    tidewellSection.querySelectorAll('[data-category="virtual-special"]').forEach(el => {
+                        el.style.display = 'block';
+                    });
+                    
+                    // Scroll to first visible item
+                    setTimeout(() => {
+                        const firstVisible = tidewellSection.querySelector('[data-category="virtual-special"]');
+                        if (firstVisible) {
+                            firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 100);
+                }
+            } else {
+                // Reset all group categories and event sections to visible
+                sections.forEach(section => {
+                    section.querySelectorAll('.group-category, .event-section').forEach(el => {
+                        el.style.display = 'block';
+                    });
+                });
+                
+                // Show/hide sections based on area
+                sections.forEach(section => {
+                    if (area === 'all') {
                         section.style.display = 'block';
                     } else {
-                        section.style.display = 'none';
+                        section.style.display = section.dataset.area === area ? 'block' : 'none';
                     }
+                });
+                
+                // Smooth scroll to first visible section
+                if (area !== 'all') {
+                    setTimeout(() => {
+                        const firstVisible = document.querySelector('.service-area[style="display: block;"]');
+                        if (firstVisible) {
+                            firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        }
+                    }, 100);
                 }
-            });
-            
-            // Smooth scroll to first visible section
-            setTimeout(() => {
-                const firstVisible = document.querySelector('.service-area[style="display: block;"]');
-                if (firstVisible && area !== 'all') {
-                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            }, 100);
+            }
         }
 
         // Smooth scrolling for anchor links
@@ -850,6 +910,42 @@
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Location to address mapping
+        const locationAddresses = {
+            'Cates House': '9505 SW 110th St, Ocala, FL 34481',
+            'Monarch Center': '2895 SE 62nd St, Ocala, FL 34480',
+            'Hale Senior Activity Center, Dunedin': '330 Douglas Ave, Dunedin, FL 34698',
+            'Empath Service Center, Palm Harbor': '2675 Tampa Rd, Palm Harbor, FL 34684',
+            'Empath Service Center, St. Petersburg': '3050 1st Ave S, St. Petersburg, FL 33712',
+            'St Paul Church, Largo': 'St Paul Church, Largo, FL',
+            'Mid Pinellas Care Center, Pinellas Park': '6770 102nd Ave N, Pinellas Park, FL 33782',
+            'Mid-Pinellas Care Center, Pinellas Park': '6770 102nd Ave N, Pinellas Park, FL 33782',
+            'Ellenton Family Grief Center, Palmetto': '4151 37th St E, Palmetto, FL 34221',
+            'Empath Health Administration, Lakewood Ranch': '6310 Capital Dr, Lakewood Ranch, FL 34202',
+            'Tidewell Administration (Wexford Blvd.), Venice': '220 Wexford Blvd, Venice, FL 34293',
+            'Tidewell Administration (Rand Rd.), Sarasota': '5955 Rand Blvd, Sarasota, FL 34238',
+            'Tidewell Administration (Veronica St.), Port Charlotte': '1158 Veronica St, Port Charlotte, FL 33952',
+            'Tidewell Administration (26th St. W.), Bradenton': '3355 26th St W, Bradenton, FL 34205-3607',
+            'Tidewell Administration (N. Access Rd.), Port Charlotte': '1158 Veronica St, Port Charlotte, FL 33952',
+            '6919 Outreach Way, North Port': '6919 Outreach Way, North Port, FL'
+        };
+
+        // Add click handlers to all group sessions
+        document.querySelectorAll('.group-session').forEach(session => {
+            session.addEventListener('click', function() {
+                const locationElement = this.querySelector('.session-location');
+                if (locationElement) {
+                    const locationText = locationElement.textContent.trim();
+                    const address = locationAddresses[locationText];
+                    
+                    if (address) {
+                        const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+                        window.open(mapsUrl, '_blank');
+                    }
                 }
             });
         });
