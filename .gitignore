@@ -1,0 +1,17 @@
+# General
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+*.log
+
+# Temporary files
+*.tmp
+.cache/

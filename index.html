@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empath Grief Care Support Groups</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --empath-purple: #6B2D8F;
+            --empath-teal: #00A3AD;
+            --empath-light-purple: #8B4DAE;
+            --empath-dark: #2C1A3D;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #F9F9F9;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .header {
+            background: linear-gradient(135deg, var(--empath-purple) 0%, var(--empath-light-purple) 100%);
+            color: var(--white);
+            padding: 2rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 0.95rem;
+            opacity: 0.95;
+        }
+
+        .hero {
+            background: linear-gradient(to bottom, var(--bg-light) 0%, var(--white) 100%);
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--empath-purple);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.125rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .registration-box {
+            background: var(--white);
+            border: 3px solid var(--empath-teal);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem auto;
+            max-width: 700px;
+            box-shadow: 0 4px 15px rgba(0,163,173,0.15);
+        }
+
+        .registration-box h2 {
+            color: var(--empath-purple);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .registration-box p {
+            font-size: 1.125rem;
+            color: var(--text-dark);
+            line-height: 1.8;
+        }
+
+        .phone-number {
+            color: var(--empath-teal);
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: block;
+            margin-top: 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        .service-area {
+            margin-bottom: 4rem;
+            background: var(--white);
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--empath-purple);
+        }
+
+        .service-area h2 {
+            color: var(--empath-purple);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 3px solid var(--empath-teal);
+            padding-bottom: 0.75rem;
+        }
+
+        .area-note {
+            color: var(--text-light);
+            font-style: italic;
+            margin: 1rem 0 2rem 0;
+            font-size: 0.95rem;
+        }
+
+        .group-category {
+            margin-bottom: 2.5rem;
+        }
+
+        .group-category h3 {
+            color: var(--empath-light-purple);
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .group-category h3::before {
+            content: "●";
+            color: var(--empath-teal);
+            margin-right: 0.75rem;
+            font-size: 1.2rem;
+        }
+
+        .group-session {
+            background: var(--bg-light);
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid var(--empath-teal);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .group-session:hover {
+            transform: translateX(5px);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .session-time {
+            font-weight: 600;
+            color: var(--empath-purple);
+            font-size: 1.125rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .session-details {
+            color: var(--text-dark);
+            margin-bottom: 0.25rem;
+        }
+
+        .session-location {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        .virtual-tag {
+            display: inline-block;
+            background: var(--empath-teal);
+            color: var(--white);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-left: 0.5rem;
+        }
+
+        .special-note {
+            background: #FFF9E6;
+            border-left: 4px solid #FFB800;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+        }
+
+        .special-note p {
+            color: var(--text-dark);
+            font-size: 0.95rem;
+        }
+
+        .seminar-section {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+        }
+
+        .seminar-item {
+            background: var(--white);
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            border-left: 4px solid var(--empath-purple);
+        }
+
+        .seminar-title {
+            font-weight: 600;
+            color: var(--empath-purple);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .seminar-description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            font-style: italic;
+        }
+
+        .event-section {
+            margin-top: 2rem;
+        }
+
+        .event-item {
+            background: linear-gradient(135deg, var(--empath-purple) 0%, var(--empath-light-purple) 100%);
+            color: var(--white);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(107, 45, 143, 0.2);
+        }
+
+        .event-item h4 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-description {
+            margin-bottom: 1rem;
+            opacity: 0.95;
+            line-height: 1.7;
+        }
+
+        .event-details {
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .footer {
+            background: var(--empath-dark);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer a {
+            color: var(--empath-teal);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .filter-bar {
+            background: var(--white);
+            padding: 1.5rem 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            background: var(--bg-light);
+            border: 2px solid var(--empath-purple);
+            color: var(--empath-purple);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            background: var(--empath-purple);
+            color: var(--white);
+        }
+
+        .filter-btn.active {
+            background: var(--empath-purple);
+            color: var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.875rem;
+            }
+
+            .service-area {
+                padding: 1.5rem;
+            }
+
+            .service-area h2 {
+                font-size: 1.5rem;
+            }
+
+            .registration-box {
+                padding: 1.5rem;
+            }
+
+            .phone-number {
+                font-size: 1.25rem;
+            }
+
+            .filter-bar {
+                padding: 1rem;
+            }
+
+            .filter-btn {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Empath Health</div>
+            <div class="tagline">Here for the Full Life</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Grief Care Support Groups</h1>
+            <p class="hero-subtitle">Compassionate support for those experiencing loss</p>
+            
+            <div class="registration-box">
+                <h2>Registration Required</h2>
+                <p>All groups require prior registration.</p>
+                <p><strong>For information or to register:</strong></p>
+                <a href="tel:8883087150" class="phone-number">(888) 308-7150</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <button class="filter-btn active" onclick="filterArea('all')">All Areas</button>
+        <button class="filter-btn" onclick="filterArea('marion')">Marion County</button>
+        <button class="filter-btn" onclick="filterArea('hillsborough')">Hillsborough & Pinellas</button>
+        <button class="filter-btn" onclick="filterArea('tidewell')">DeSoto, Charlotte, Manatee & Sarasota</button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Marion County -->
+        <section class="service-area" data-area="marion">
+            <h2>Marion County</h2>
+            <p class="area-note">Hospice of Marion County Area | All groups are 6 Sessions, Biweekly, unless noted.</p>
+
+            <div class="group-category">
+                <h3>Friends in Grief Support Groups</h3>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, January 6 - March 18</div>
+                    <div class="session-details">10:30 AM - Noon</div>
+                    <div class="session-location">Cates House</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, February 18 - April 29</div>
+                    <div class="session-details">1:30 PM - 3:00 PM</div>
+                    <div class="session-location">Cates House</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, July 15 - September 23</div>
+                    <div class="session-details">1:30 PM - 3:00 PM</div>
+                    <div class="session-location">Cates House</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Traumatic Loss Support Groups</h3>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, April 24 - July 3</div>
+                    <div class="session-details">1:30 PM - 3:00 PM</div>
+                    <div class="session-location">Cates House</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, May 20 - July 29</div>
+                    <div class="session-details">5:30 PM - 7:00 PM</div>
+                    <div class="session-location">Monarch Center</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Child Loss Support Groups</h3>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, May 26 - August 4</div>
+                    <div class="session-details">10:30 AM - Noon</div>
+                    <div class="session-location">Cates House</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, August 19 - October 28</div>
+                    <div class="session-details">5:30 PM - 7:00 PM</div>
+                    <div class="session-location">Monarch Center</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Spousal Loss Support Groups</h3>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, October 13 - December 22</div>
+                    <div class="session-details">1:30 PM - 3:00 PM</div>
+                    <div class="session-location">Cates House</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Friends in Grief 2 Support Group</h3>
+                <p class="area-note">3 Sessions, Biweekly (For those who completed "Friends in Grief")</p>
+                <div class="group-session">
+                    <div class="session-time">Thursday, September 10 - October 8</div>
+                    <div class="session-details">1:30 PM - 3:00 PM</div>
+                    <div class="session-location">Cates House</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hillsborough & Pinellas Counties -->
+        <section class="service-area" data-area="hillsborough">
+            <h2>Hillsborough County + Pinellas County</h2>
+            <p class="area-note">Suncoast Hospice of Hillsborough + Suncoast Hospice Areas | All groups are 6 Sessions, Biweekly, unless noted.</p>
+
+            <div class="group-category">
+                <h3>Spouse Loss Retirement Years Groups</h3>
+                <div class="group-session">
+                    <div class="session-time">Fridays, January 30 - March 6</div>
+                    <div class="session-details">10:00 AM - Noon</div>
+                    <div class="session-location">Hale Senior Activity Center, Dunedin</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, February 3 - March 10</div>
+                    <div class="session-details">10:00 AM - Noon</div>
+                    <div class="session-location">Empath Service Center, Palm Harbor</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, February 3 - March 10</div>
+                    <div class="session-details">10:00 AM - Noon</div>
+                    <div class="session-location">Empath Service Center, St. Petersburg</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, February 4 - March 11</div>
+                    <div class="session-details">11:30 AM - 1:30 PM</div>
+                    <div class="session-location">St Paul Church, Largo</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Spouse Loss Working Years</h3>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 14 - February 18</div>
+                    <div class="session-details">5:30 PM - 7:30 PM</div>
+                    <div class="session-location">Mid-Pinellas Care Center, Pinellas Park</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Adult Loss of Parent</h3>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, January 13 - February 17</div>
+                    <div class="session-details">5:00 PM - 7:00 PM</div>
+                    <div class="session-location">Mid Pinellas Care Center, Pinellas Park</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesday, February 11 - March 18</div>
+                    <div class="session-details">5:30 PM - 7:30 PM</div>
+                    <div class="session-location">Empath Service Center, St. Petersburg</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Loss of Adult Child</h3>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 21 - March 4</div>
+                    <div class="session-details">5:30 PM - 7:30 PM</div>
+                    <div class="session-location">Empath Service Center, St. Petersburg</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>General Grief & Loss</h3>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 21 - February 25</div>
+                    <div class="session-details">4:00 PM - 6:00 PM</div>
+                    <div class="session-location">Mid Pinellas Care Center, Pinellas Park</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>General Grief & Loss Group in Spanish <span class="virtual-tag">VIRTUAL</span></h3>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 21 - March 4</div>
+                    <div class="session-details">5:00 PM - 7:00 PM</div>
+                    <div class="special-note">
+                        <p><strong>To register for this Spanish virtual group, please call: <a href="tel:7272444514" style="color: var(--empath-teal); font-weight: 700;">727-244-4514</a></strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Grief 101: One-Time Presentations</h3>
+                <p class="area-note">For those whose loss is recent and/or who just wish to have basic grief information and are not ready or interested in a full six-week group.</p>
+                
+                <div class="group-session">
+                    <div class="session-time">Thursday, January 22</div>
+                    <div class="session-details">5:30 PM - 7:00 PM</div>
+                    <div class="session-location">Mid Pinellas Care Center, Pinellas Park</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Friday, February 6</div>
+                    <div class="session-details">1:00 PM - 2:30 PM</div>
+                    <div class="session-location">Empath Service Center, Palm Harbor</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Tuesday, February 17</div>
+                    <div class="session-details">3:00 PM - 4:30 PM</div>
+                    <div class="session-location">Empath Service Center, St. Petersburg</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Thursday, February 26</div>
+                    <div class="session-details">6:00 PM - 7:30 PM</div>
+                    <div class="session-location">Mid Pinellas Care Center, Pinellas Park</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesday, March 4</div>
+                    <div class="session-details">6:00 PM - 7:30 PM</div>
+                    <div class="session-location">Empath Service Center, Palm Harbor</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Tuesday, March 10</div>
+                    <div class="session-details">2:30 PM - 4:00 PM</div>
+                    <div class="session-location">Mid Pinellas Care Center, Pinellas Park</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Thursday, March 26</div>
+                    <div class="session-details">5:00 PM - 6:30 PM</div>
+                    <div class="session-location">Empath Service Center, St. Petersburg</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DeSoto, Charlotte, Manatee, Sarasota Counties -->
+        <section class="service-area" data-area="tidewell">
+            <h2>DeSoto, Charlotte, Manatee, and Sarasota Counties</h2>
+            <p class="area-note">Tidewell Hospice Area | All groups are 6 Sessions, Biweekly, unless noted.</p>
+
+            <div class="group-category">
+                <h3>Newly Bereaved Spousal Loss</h3>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 7 - March 18</div>
+                    <div class="session-details">1:00 PM - 2:00 PM</div>
+                    <div class="session-location">Ellenton Family Grief Center, Palmetto</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Intro to Spousal Loss Support Groups</h3>
+                <div class="group-session">
+                    <div class="session-time">Thursdays, January 8 - March 19</div>
+                    <div class="session-details">10:00 AM - Noon</div>
+                    <div class="session-location">Empath Health Administration, Lakewood Ranch</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Thursdays, January 8 - March 19</div>
+                    <div class="session-details">10:30 AM - Noon</div>
+                    <div class="session-location">Tidewell Administration (Rand Rd.), Sarasota</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Fridays, January 30 - April 10</div>
+                    <div class="session-details">10:00 AM - 11:30 AM</div>
+                    <div class="session-location">Tidewell Administration (Wexford Blvd.), Venice</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Next Steps Spousal Loss Support Groups</h3>
+                <p class="area-note">Requires previous completion of Intro to Spousal Loss</p>
+                
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 7 - March 11</div>
+                    <div class="session-details">10:30 AM - Noon</div>
+                    <div class="session-location">Tidewell Administration (Rand Rd.), Sarasota</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Thursdays, January 15 - March 26</div>
+                    <div class="session-details">10:00 AM - Noon</div>
+                    <div class="session-location">Empath Health Administration, Lakewood Ranch</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 21 - April 8</div>
+                    <div class="session-details">3:00 PM - 4:30 PM</div>
+                    <div class="session-location">Tidewell Administration (Veronica St.), Port Charlotte</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, February 4 - April 15</div>
+                    <div class="session-details">Noon - 1:30 PM</div>
+                    <div class="session-location">Tidewell Administration (26th St. W.), Bradenton</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>You've Got This...Further Out Spousal Loss Support Group</h3>
+                <div class="group-session">
+                    <div class="session-time">Mondays, January 5 - March 16</div>
+                    <div class="session-details">1:00 PM - 2:00 PM</div>
+                    <div class="session-location">Ellenton Family Grief Center, Palmetto</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Men's Spousal/Partner Loss Support Group</h3>
+                <div class="group-session">
+                    <div class="session-time">Mondays, January 12 - March 23</div>
+                    <div class="session-details">1:00 PM - 2:00 PM</div>
+                    <div class="session-location">Ellenton Family Grief Center, Palmetto</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Spousal Loss Coffee + Connections Support Group</h3>
+                <p class="area-note">A fellowship-oriented support group for those whose spouse/partner died over one year ago.</p>
+                
+                <div class="group-session">
+                    <div class="session-time">3rd Thursday of Each Month (Starting January 15)</div>
+                    <div class="session-details">2:00 PM - 3:00 PM</div>
+                    <div class="session-location">Tidewell Administration (N. Access Rd.), Port Charlotte</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Parent Loss Support Group</h3>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 28 - April 8</div>
+                    <div class="session-details">10:00 AM - 11:30 AM</div>
+                    <div class="session-location">Tidewell Administration (Wexford Blvd.), Venice</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Adult Child Loss Support Group</h3>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, January 6 - March 18</div>
+                    <div class="session-details">10:00 AM - 11:30 AM</div>
+                    <div class="session-location">6919 Outreach Way, North Port</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Living with Suicide Loss Support Group</h3>
+                <p class="area-note">8 Sessions, Biweekly</p>
+                
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, January 6 - April 15</div>
+                    <div class="session-details">4:30 PM - 6:00 PM</div>
+                    <div class="session-location">Tidewell Administration (Rand Rd.), Sarasota</div>
+                </div>
+            </div>
+
+            <!-- Virtual Seminars -->
+            <div class="group-category">
+                <h3>Virtual Seminars <span class="virtual-tag">VIRTUAL</span></h3>
+                <div class="special-note">
+                    <p><strong>To register, email your interest to: <a href="mailto:jspurr@empathhealth.org" style="color: var(--empath-teal);">jspurr@empathhealth.org</a></strong></p>
+                </div>
+
+                <div class="seminar-section">
+                    <div class="seminar-item">
+                        <div class="seminar-title">January 16, 2026 at 10:30 AM</div>
+                        <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Past, Present and Future: Grief and the Dual Process Model</div>
+                        <div class="seminar-description">Moving through grief is a balance between honoring the past and finding a way forward.</div>
+                    </div>
+
+                    <div class="seminar-item">
+                        <div class="seminar-title">January 30, 2026 at 10:30 AM</div>
+                        <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Grief: Body, Mind, and Soul</div>
+                        <div class="seminar-description">Grief impacts our entire person. Join us as we discuss how to care for all aspects of self during grief and loss. *Note: This is a repeat of the seminar from fall 2025</div>
+                    </div>
+
+                    <div class="seminar-item">
+                        <div class="seminar-title">February 13, 2025 at 10:30 AM</div>
+                        <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Safety, Scams and Stepping Out</div>
+                        <div class="seminar-description">Navigating the world after loss can be tricky. The seminar will focus on safety concerns, including how to protect yourself from common scams. There will be a section at the end for those interested in moving forward with dating (if not interested, you can leave before this section starts). *This will also be presented in person at the Sarasota/Rand office location.</div>
+                    </div>
+
+                    <div class="seminar-item">
+                        <div class="seminar-title">February 27, 2025 at Noon</div>
+                        <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Grief and Boundaries</div>
+                        <div class="seminar-description">Discover ways to set healthy boundaries that support your health and wellbeing during times of grief and loss.</div>
+                    </div>
+
+                    <div class="seminar-item">
+                        <div class="seminar-title">March 13, 2026 at 10:30 AM</div>
+                        <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Using Art, Music and Movement to Navigate Grief</div>
+                        <div class="seminar-description">Art, music and movement are tools that can help us navigate grief. Join us to learn how to utilize these tools. *Note: Repeat of fall 2025 seminar</div>
+                    </div>
+
+                    <div class="seminar-item">
+                        <div class="seminar-title">March 27, 2026 at 10:30 AM</div>
+                        <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Grief and Relationships: Building Social Support</div>
+                        <div class="seminar-description">During grief connecting with others can be challenging. Join us in exploring ways to build social support to help navigate your grief journey. *Note: Repeat of fall 2025 seminar</div>
+                    </div>
+
+                    <div class="seminar-item">
+                        <div class="seminar-title">April 10, 2026 at Noon</div>
+                        <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">Grief and Hope</div>
+                        <div class="seminar-description">During loss, hope can feel, and be, elusive. But hope is more than wishful thinking and love is stronger than our pain and loss. Join us as we discuss hope.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Special Events -->
+            <div class="event-section">
+                <h3 style="color: var(--empath-purple); font-size: 1.75rem; margin-bottom: 1.5rem;">Special Events</h3>
+
+                <div class="event-item">
+                    <h4>Safety, Scams and Stepping Out (Virtual & In Person)</h4>
+                    <div class="event-description">
+                        <p>Join us in a safe space to discuss safety concerns often associated with living alone. Information will be shared on how to avoid scams, including financial and romantic scams. The final portion of the event focuses on dating after loss. Individuals adjusting to living alone and those moving through spousal loss who may be considering dating again are encouraged to attend.</p>
+                        <p style="margin-top: 0.75rem;"><em>*Participants who prefer not to attend the dating portion may leave before that segment begins.</em></p>
+                    </div>
+                    <div class="event-details">Friday, February 13 | 10:30 AM - Noon | Tidewell Administration (Rand Rd.), Sarasota</div>
+                </div>
+
+                <div class="event-item">
+                    <h4>Grief Movie Events</h4>
+                    <div class="event-description">
+                        <p>Join us to watch a film together and discuss topics related to grief and healing as depicted on screen. Drinks will be provided, and attendees are encouraged to bring their own snacks if desired.</p>
+                    </div>
+                    <div class="event-details">
+                        Fridays: January 23; February 13; March 13; April 17<br>
+                        1:30 PM - 4:00 PM<br>
+                        Tidewell Administration (Rand Rd.), Sarasota
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Broward + Palm Beach Counties -->
+        <section class="service-area" data-area="broward" style="background: var(--bg-light); border-left: 5px solid var(--text-light);">
+            <h2 style="color: var(--text-light);">Broward + Palm Beach Counties</h2>
+            <p class="area-note">Trustbridge Area - Information coming soon</p>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p style="margin-bottom: 1rem;"><strong>Empath Health</strong></p>
+            <p style="margin-bottom: 0.5rem;">For registration and information:</p>
+            <p style="font-size: 1.5rem; font-weight: 700; color: var(--empath-teal); margin-bottom: 1.5rem;">
+                <a href="tel:8883087150">(888) 308-7150</a>
+            </p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                Visit <a href="https://empathhealth.org">empathhealth.org</a> for more information about our services
+            </p>
+            <p style="font-size: 0.85rem; margin-top: 1.5rem; opacity: 0.7;">
+                © 2025 Empath Health. Here for the Full Life.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        function filterArea(area) {
+            // Remove active class from all buttons
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            event.target.classList.add('active');
+            
+            // Show/hide sections
+            const sections = document.querySelectorAll('.service-area');
+            sections.forEach(section => {
+                if (area === 'all') {
+                    section.style.display = 'block';
+                } else {
+                    if (section.dataset.area === area) {
+                        section.style.display = 'block';
+                    } else {
+                        section.style.display = 'none';
+                    }
+                }
+            });
+            
+            // Smooth scroll to first visible section
+            setTimeout(() => {
+                const firstVisible = document.querySelector('.service-area[style="display: block;"]');
+                if (firstVisible && area !== 'all') {
+                    firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 100);
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
