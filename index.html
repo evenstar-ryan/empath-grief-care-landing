@@ -24,10 +24,11 @@
         }
 
         :root {
-            --empath-purple: #381D4F;
-            --empath-teal: #00A3AD;
-            --empath-light-purple: #8B4DAE;
-            --empath-dark: #2C1A3D;
+            --empath-eggplant: #3D1951;
+            --empath-purple: #8431A5;
+            --empath-pink: #CD5599;
+            --empath-orange: #FF4338;
+            --empath-gray: #BDBBBC;
             --text-dark: #333;
             --text-light: #666;
             --bg-light: #F9F9F9;
@@ -42,7 +43,7 @@
         }
 
         .header {
-            background: linear-gradient(135deg, var(--empath-purple) 0%, var(--empath-light-purple) 100%);
+            background: linear-gradient(135deg, var(--empath-eggplant) 0%, var(--empath-purple) 100%);
             color: var(--white);
             padding: 2rem 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -56,7 +57,7 @@
 
         .hero {
             position: relative;
-            background-image: linear-gradient(rgba(56, 29, 79, 0.7), rgba(56, 29, 79, 0.7)), 
+            background-image: linear-gradient(rgba(61, 25, 81, 0.7), rgba(61, 25, 81, 0.7)), 
                               url('https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=1600&q=80');
             background-size: cover;
             background-position: center;
@@ -92,16 +93,16 @@
 
         .registration-box {
             background: var(--white);
-            border: 3px solid var(--empath-teal);
+            border: 3px solid var(--empath-purple);
             border-radius: 12px;
             padding: 2rem;
             margin: 2rem auto;
             max-width: 700px;
-            box-shadow: 0 4px 15px rgba(0,163,173,0.15);
+            box-shadow: 0 4px 15px rgba(132, 49, 165, 0.15);
         }
 
         .registration-box h2 {
-            color: var(--empath-purple);
+            color: var(--empath-eggplant);
             margin-bottom: 1rem;
             font-size: 1.5rem;
         }
@@ -113,7 +114,7 @@
         }
 
         .phone-number {
-            color: var(--empath-teal);
+            color: var(--empath-purple);
             font-weight: 700;
             font-size: 1.5rem;
             display: block;
@@ -132,14 +133,14 @@
             border-radius: 12px;
             padding: 2.5rem;
             box-shadow: 0 2px 15px rgba(0,0,0,0.08);
-            border-left: 5px solid var(--empath-purple);
+            border-left: 5px solid var(--empath-eggplant);
         }
 
         .service-area h2 {
-            color: var(--empath-purple);
+            color: var(--empath-eggplant);
             font-size: 2rem;
             margin-bottom: 0.5rem;
-            border-bottom: 3px solid var(--empath-teal);
+            border-bottom: 3px solid var(--empath-purple);
             padding-bottom: 0.75rem;
         }
 
@@ -155,7 +156,7 @@
         }
 
         .group-category h3 {
-            color: var(--empath-light-purple);
+            color: var(--empath-purple);
             font-size: 1.5rem;
             margin-bottom: 1.25rem;
             display: flex;
@@ -164,7 +165,7 @@
 
         .group-category h3::before {
             content: "●";
-            color: var(--empath-teal);
+            color: var(--empath-pink);
             margin-right: 0.75rem;
             font-size: 1.2rem;
         }
@@ -175,7 +176,7 @@
             margin-bottom: 1rem;
             border-radius: 8px;
             border: 1px solid #E0E0E0;
-            border-left: 4px solid var(--empath-teal);
+            border-left: 4px solid var(--empath-purple);
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
             cursor: pointer;
@@ -184,7 +185,7 @@
         .group-session:hover {
             transform: translateX(5px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            border-left-color: var(--empath-purple);
+            border-left-color: var(--empath-pink);
             background: #FAFAFA;
         }
         
@@ -196,7 +197,7 @@
 
         .session-time {
             font-weight: 600;
-            color: var(--empath-purple);
+            color: var(--empath-eggplant);
             font-size: 1.125rem;
             margin-bottom: 0.5rem;
         }
@@ -213,7 +214,7 @@
 
         .virtual-tag {
             display: inline-block;
-            background: var(--empath-teal);
+            background: var(--empath-purple);
             color: var(--white);
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
@@ -223,8 +224,8 @@
         }
 
         .special-note {
-            background: #FFF9E6;
-            border-left: 4px solid #FFB800;
+            background: #F0F0F0;
+            border-left: 4px solid var(--empath-gray);
             padding: 1rem 1.5rem;
             margin: 1.5rem 0;
             border-radius: 4px;
@@ -248,13 +249,13 @@
             margin-bottom: 1rem;
             border-radius: 6px;
             border: 1px solid #E0E0E0;
-            border-left: 4px solid var(--empath-purple);
+            border-left: 4px solid var(--empath-eggplant);
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
         .seminar-title {
             font-weight: 600;
-            color: var(--empath-purple);
+            color: var(--empath-eggplant);
             margin-bottom: 0.5rem;
             font-size: 1.1rem;
         }
@@ -270,12 +271,12 @@
         }
 
         .event-item {
-            background: linear-gradient(135deg, var(--empath-purple) 0%, var(--empath-light-purple) 100%);
+            background: linear-gradient(135deg, var(--empath-eggplant) 0%, var(--empath-purple) 100%);
             color: var(--white);
             padding: 2rem;
             margin-bottom: 1.5rem;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(107, 45, 143, 0.2);
+            box-shadow: 0 4px 15px rgba(61, 25, 81, 0.2);
         }
 
         .event-item h4 {
@@ -295,7 +296,7 @@
         }
 
         .footer {
-            background: var(--empath-dark);
+            background: var(--empath-eggplant);
             color: var(--white);
             padding: 2rem 0;
             text-align: center;
@@ -308,7 +309,7 @@
         }
 
         .footer a {
-            color: var(--empath-teal);
+            color: var(--empath-purple);
             text-decoration: none;
         }
 
@@ -331,8 +332,8 @@
 
         .filter-btn {
             background: var(--bg-light);
-            border: 2px solid var(--empath-purple);
-            color: var(--empath-purple);
+            border: 2px solid var(--empath-eggplant);
+            color: var(--empath-eggplant);
             padding: 0.75rem 1.5rem;
             border-radius: 25px;
             cursor: pointer;
@@ -343,11 +344,13 @@
 
         .filter-btn:hover {
             background: var(--empath-purple);
+            border-color: var(--empath-purple);
             color: var(--white);
         }
 
         .filter-btn.active {
-            background: var(--empath-purple);
+            background: var(--empath-eggplant);
+            border-color: var(--empath-eggplant);
             color: var(--white);
         }
 
@@ -418,6 +421,7 @@
         <button class="filter-btn" onclick="filterArea('marion')">Marion County</button>
         <button class="filter-btn" onclick="filterArea('hillsborough')">Hillsborough & Pinellas</button>
         <button class="filter-btn" onclick="filterArea('tidewell')">DeSoto, Charlotte, Manatee & Sarasota</button>
+        <button class="filter-btn" onclick="filterArea('trustbridge')">Broward & Palm Beach</button>
         <button class="filter-btn" onclick="filterArea('virtual-special')">Virtual & Special Events</button>
     </div>
 
@@ -571,7 +575,7 @@
                     <div class="session-time">Wednesdays, January 21 - March 4</div>
                     <div class="session-details">5:00 PM - 7:00 PM</div>
                     <div class="special-note">
-                        <p><strong>To register for this Spanish virtual group, please call: <a href="tel:7272444514" style="color: var(--empath-teal); font-weight: 700;">727-244-4514</a></strong></p>
+                        <p><strong>To register for this Spanish virtual group, please call: <a href="tel:7272444514" style="color: var(--empath-purple); font-weight: 700;">727-244-4514</a></strong></p>
                     </div>
                 </div>
             </div>
@@ -734,12 +738,71 @@
                     <div class="session-location">Tidewell Administration (Rand Rd.), Sarasota</div>
                 </div>
             </div>
+        </section>
+
+        <!-- Broward + Palm Beach Counties (Trustbridge) -->
+        <section class="service-area" data-area="trustbridge">
+            <h2>Broward + Palm Beach Counties</h2>
+            <p class="area-note">Trustbridge Area</p>
+
+            <div class="group-category">
+                <h3>Spouse Loss</h3>
+                <div class="group-session">
+                    <div class="session-time">Wednesdays, January 7 - February 25</div>
+                    <div class="session-details">2:00 PM - 3:30 PM</div>
+                    <div class="session-location">1531 W. Palmetto Park Road, Boca Raton</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Mondays, January 12 - March 2</div>
+                    <div class="session-details">11:30 AM - 1:00 PM</div>
+                    <div class="session-location">300 Northpoint Parkway, Suite 305, West Palm Beach</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, January 27 - March 17</div>
+                    <div class="session-details">2:00 PM - 3:30 PM</div>
+                    <div class="session-location">1903 S. Congress Avenue, Suite 201, Boynton Beach</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Thursdays, February 12 - April 2</div>
+                    <div class="session-details">2:00 PM - 3:30 PM</div>
+                    <div class="session-location">1903 S. Congress Avenue, Suite 201, Boynton Beach</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>General Grief & Loss</h3>
+                <div class="group-session">
+                    <div class="session-time">Mondays, February 2 - March 23</div>
+                    <div class="session-details">6:00 PM - 7:30 PM</div>
+                    <div class="session-location">550 W. Cypress Creek Road, Suite 560, Fort Lauderdale</div>
+                </div>
+                <div class="group-session">
+                    <div class="session-time">Tuesdays, February 3 - March 24</div>
+                    <div class="session-details">6:00 PM - 7:30 PM</div>
+                    <div class="session-location">John Knox Village, The Woodlands Building, 700 SW 4th Street, Pompano Beach</div>
+                </div>
+            </div>
+
+            <div class="group-category">
+                <h3>Parent Loss</h3>
+                <div class="group-session">
+                    <div class="session-time">Thursdays, January 8 - February 26</div>
+                    <div class="session-details">2:00 PM - 3:30 PM</div>
+                    <div class="session-location">300 Northpoint Parkway, Suite 305, West Palm Beach</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Virtual & Special Events (Tidewell) -->
+        <section class="service-area" data-area="virtual-special">
+            <h2>Virtual & Special Events</h2>
+            <p class="area-note">Hosted by Tidewell Hospice</p>
 
             <!-- Virtual Seminars -->
             <div class="group-category" data-category="virtual-special">
                 <h3>Virtual Seminars <span class="virtual-tag">VIRTUAL</span></h3>
                 <div class="special-note">
-                    <p><strong>To register, email your interest to: <a href="mailto:jspurr@empathhealth.org" style="color: var(--empath-teal);">jspurr@empathhealth.org</a></strong></p>
+                    <p><strong>To register, email your interest to: <a href="mailto:jspurr@empathhealth.org" style="color: var(--empath-purple);">jspurr@empathhealth.org</a></strong></p>
                 </div>
 
                 <div class="seminar-section">
@@ -789,7 +852,7 @@
 
             <!-- Special Events -->
             <div class="event-section" data-category="virtual-special">
-                <h3 style="color: var(--empath-purple); font-size: 1.75rem; margin-bottom: 1.5rem;">Special Events</h3>
+                <h3 style="color: var(--empath-eggplant); font-size: 1.75rem; margin-bottom: 1.5rem;">Special Events</h3>
 
                 <div class="event-item">
                     <h4>Safety, Scams and Stepping Out (Virtual & In Person)</h4>
@@ -813,12 +876,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Broward + Palm Beach Counties -->
-        <section class="service-area" data-area="broward" style="background: var(--bg-light); border-left: 5px solid var(--text-light);">
-            <h2 style="color: var(--text-light);">Broward + Palm Beach Counties</h2>
-            <p class="area-note">Trustbridge Area - Information coming soon</p>
-        </section>
     </div>
 
     <!-- Footer -->
@@ -826,7 +883,7 @@
         <div class="footer-content">
             <p style="margin-bottom: 1rem;"><strong>Empath Health</strong></p>
             <p style="margin-bottom: 0.5rem;">For registration and information:</p>
-            <p style="font-size: 1.5rem; font-weight: 700; color: var(--empath-teal); margin-bottom: 1.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 700; color: var(--empath-purple); margin-bottom: 1.5rem;">
                 <a href="tel:8883087150">(888) 308-7150</a>
             </p>
             <p style="font-size: 0.9rem; opacity: 0.8;">
@@ -848,40 +905,18 @@
             const sections = document.querySelectorAll('.service-area');
             
             if (area === 'virtual-special') {
-                // Hide all service areas
-                sections.forEach(section => section.style.display = 'none');
-                
-                // Show only Tidewell (which contains the virtual/special events)
-                const tidewellSection = document.querySelector('[data-area="tidewell"]');
-                if (tidewellSection) {
-                    tidewellSection.style.display = 'block';
-                    
-                    // Hide all group categories and event sections first
-                    tidewellSection.querySelectorAll('.group-category, .event-section').forEach(el => {
-                        el.style.display = 'none';
-                    });
-                    
-                    // Show only virtual-special items
-                    tidewellSection.querySelectorAll('[data-category="virtual-special"]').forEach(el => {
-                        el.style.display = 'block';
-                    });
-                    
-                    // Scroll to first visible item
-                    setTimeout(() => {
-                        const firstVisible = tidewellSection.querySelector('[data-category="virtual-special"]');
-                        if (firstVisible) {
-                            firstVisible.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                    }, 100);
-                }
-            } else {
-                // Reset all group categories and event sections to visible
+                // Show only virtual-special section
                 sections.forEach(section => {
-                    section.querySelectorAll('.group-category, .event-section').forEach(el => {
-                        el.style.display = 'block';
-                    });
+                    section.style.display = section.dataset.area === 'virtual-special' ? 'block' : 'none';
                 });
                 
+                setTimeout(() => {
+                    const virtualSection = document.querySelector('[data-area="virtual-special"]');
+                    if (virtualSection) {
+                        virtualSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                }, 100);
+            } else {
                 // Show/hide sections based on area
                 sections.forEach(section => {
                     if (area === 'all') {
@@ -931,7 +966,12 @@
             'Tidewell Administration (Veronica St.), Port Charlotte': '1158 Veronica St, Port Charlotte, FL 33952',
             'Tidewell Administration (26th St. W.), Bradenton': '3355 26th St W, Bradenton, FL 34205-3607',
             'Tidewell Administration (N. Access Rd.), Port Charlotte': '1158 Veronica St, Port Charlotte, FL 33952',
-            '6919 Outreach Way, North Port': '6919 Outreach Way, North Port, FL'
+            '6919 Outreach Way, North Port': '6919 Outreach Way, North Port, FL',
+            '1531 W. Palmetto Park Road, Boca Raton': '1531 W. Palmetto Park Road, Boca Raton, FL',
+            '300 Northpoint Parkway, Suite 305, West Palm Beach': '300 Northpoint Parkway, Suite 305, West Palm Beach, FL',
+            '1903 S. Congress Avenue, Suite 201, Boynton Beach': '1903 S. Congress Avenue, Suite 201, Boynton Beach, FL',
+            '550 W. Cypress Creek Road, Suite 560, Fort Lauderdale': '550 W. Cypress Creek Road, Suite 560, Fort Lauderdale, FL',
+            'John Knox Village, The Woodlands Building, 700 SW 4th Street, Pompano Beach': 'John Knox Village, The Woodlands Building, 700 SW 4th Street, Pompano Beach, FL'
         };
 
         // Add click handlers to all group sessions
@@ -939,7 +979,7 @@
             session.addEventListener('click', function() {
                 const locationElement = this.querySelector('.session-location');
                 if (locationElement) {
-                    const locationText = locationElement.textContent.trim();
+                    const locationText = locationElement.textContent.trim().replace(' 📍', '');
                     const address = locationAddresses[locationText];
                     
                     if (address) {
