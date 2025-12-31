@@ -2,7 +2,7 @@
 
 A professional, single-page website displaying grief support group schedules and information for Empath Health across multiple Florida service areas.
 
-## 🎨 Brand Colors
+## Brand Colors
 
 This site uses Empath Health's official brand color palette:
 
@@ -14,7 +14,7 @@ This site uses Empath Health's official brand color palette:
 | Orange (Inner Petal) | `#FF4338` | Available for CTAs and emphasis |
 | Gray (Support Color) | `#BDBBBC` | Information boxes, subtle backgrounds |
 
-## 📍 Service Areas
+## Service Areas
 
 The website covers grief support groups across five service areas:
 
@@ -24,28 +24,28 @@ The website covers grief support groups across five service areas:
 4. **Broward & Palm Beach Counties** - Trustbridge Area
 5. **Virtual & Special Events** - Hosted by Tidewell Hospice
 
-## ✨ Features
+## Features
 
-### 🔍 Smart Filtering
+### Smart Filtering
 - **Sticky navigation bar** with area-specific filter buttons
 - Filter by geographic area or view all groups at once
 - Special filter for virtual seminars and special events
 - Smooth scrolling to filtered sections
 
-### 🗺️ Interactive Location Cards
+### Interactive Location Cards
 - **Click any group session card** to open Google Maps with the location
 - All addresses pre-mapped for instant directions
 - Visual indicator (📍) on each location
 - Hover effects show cards are interactive
 
-### 🎯 User Experience
+### User Experience
 - **Responsive design** - Works seamlessly on desktop, tablet, and mobile
 - **Clickable logo** - Links back to empathhealth.org/grief-services
 - **Click-to-call phone numbers** for mobile users
 - **Clean visual hierarchy** - White cards on light gray backgrounds
 - **Professional typography** - Poppins font from Google Fonts
 
-### 📅 Group Types
+### Group Types
 
 The site displays various support group categories:
 - Friends in Grief
@@ -59,7 +59,7 @@ The site displays various support group categories:
 - Virtual Seminars
 - Special Events
 
-## 🚀 Deployment
+## Deployment
 
 This site is hosted on **Cloudflare Pages** and automatically deploys from the `main` branch.
 
@@ -72,13 +72,13 @@ This site is hosted on **Cloudflare Pages** and automatically deploys from the `
 3. Site rebuilds and deploys in ~60 seconds
 4. Changes are live
 
-## 🛠️ Local Development
+## Local Development
 
 This is a static HTML site - no build process required!
 
 Simply open `index.html` in any modern web browser to view the site locally.
 
-## 📝 Updating Content
+## Updating Content
 
 ### To Update Group Schedules:
 1. Edit the `index.html` file
@@ -99,7 +99,7 @@ locationAddresses = {
 };
 ```
 
-## 🎨 Design System
+## Design System
 
 ### Color Variables
 All colors are defined as CSS variables in the `:root` selector for easy maintenance:
@@ -124,7 +124,7 @@ All colors are defined as CSS variables in the `:root` selector for easy mainten
 - `.group-session` - Individual clickable group cards
 - `.filter-bar` - Sticky navigation with filter buttons
 
-## 📞 Contact Information
+## Contact Information
 
 **For Registration & Information:**
 Phone: [(888) 308-7150](tel:8883087150)
@@ -135,22 +135,21 @@ Email: jspurr@empathhealth.org
 **For Spanish Virtual Group Registration:**
 Phone: [(727) 244-4514](tel:7272444514)
 
-## 🔗 Related Links
+## Related Links
 
 - [Empath Health Main Site](https://empathhealth.org)
 - [Grief Services Page](https://empathhealth.org/grief-services)
 
-## 📄 File Structure
+## File Structure
 
 ```
 empath-grief-care/
 ├── index.html          # Main website file (single-page application)
 ├── README.md           # This file
-├── .gitignore         # Git ignore rules
-└── quick-setup.sh     # Optional setup helper script
+└── .gitignore          # Git ignore rules
 ```
 
-## 🎯 Browser Support
+## Browser Support
 
 - ✅ Chrome (latest)
 - ✅ Firefox (latest)
@@ -159,11 +158,11 @@ empath-grief-care/
 - ✅ Mobile Safari (iOS)
 - ✅ Chrome Mobile (Android)
 
-## 🤝 Contributing
+## Contributing
 
 This website is maintained for Empath Health. For content updates or corrections, please contact Ryan McKee @ Evenstar MSP (941) 222-2002.
 
-## 📋 License
+## License
 
 Created for Empath Health - All rights reserved.
 
